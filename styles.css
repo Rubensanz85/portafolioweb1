@@ -1,0 +1,619 @@
+/* Estilos Generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg: #121212; /* Fondo oscuro */
+    --blue: #1e90ff; /* Azul oscuro */
+    --dark-bg: #1B1F24; /* Fondo oscuro */
+    --card-bg: #2c2c2c; /* Fondo de tarjeta oscuro */
+    --hover-bg: #333; /* Fondo oscuro para hover */
+    --hover-color: #ffffff; /* Color blanco para hover */
+    --title-color: #1e90ff; /* Azul oscuro para títulos */
+    --subtitle-color: #ff69b4; /* Rosa oscuro para subtítulos */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    height: 15vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 35px;
+    color: var(--title-color);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    animation: slide-in 1s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+header a {
+    position: relative;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    transition: .2s ease-in;
+    border-bottom: 2px solid var(--blue);
+    overflow: hidden;
+}
+
+header a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease-in;
+}
+
+header a:hover {
+    color: var(--hover-color);
+    font-weight: bold;
+}
+
+header a:hover::before {
+    transform: scaleX(1);
+}
+
+#btn {
+    display: none;
+}
+
+/* Inicio */
+#inicio {
+    min-height: 75vh;
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Texto destacado */
+.title {
+    font-size: 70px; /* Tamaño más grande para el primer renglón "¡Hola!" */
+    color: white;
+}
+
+.highlighted {
+    font-size: 55px; /* Tamaño decreciente para el segundo renglón */
+    color: white;
+}
+
+.subtitle {
+    font-size: 45px; /* Tamaño decreciente para el tercer renglón */
+    color: var(--subtitle-color);
+}
+
+.description {
+    font-size: 30px; /* Tamaño más pequeño para el cuarto renglón */
+}
+
+.highlight {
+    color: var(--title-color); /* Color de los títulos para las palabras destacadas */
+}
+
+.profile-pic {
+    width: 350px;
+    height: 500px;
+    border-radius: 10%;
+    animation: fade-in 1s ease-in-out forwards;
+    box-shadow: 0 0 12px rgba(30, 144, 255, 0.3), /* Azul oscuro sutil */
+                0 0 12px rgba(169, 169, 169, 0.3); /* Gris para un contraste suave */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.buttons button {
+    padding: 1rem 3rem;
+    background: var(--blue);
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.buttons button:hover {
+    background: var(--dark-bg);
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 2rem;
+}
+
+.hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+}
+
+.hero-title h1 {
+    font-size: 3rem;
+    color: var(--title-color);
+    position: relative;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 1rem; /* Para dar espacio a la sombra */
+}
+
+.hero-title h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    background: #1a1a1a;;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.bio {
+    flex: 2;
+    padding: 0.625rem;
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-align: justify; /* Justificar el texto */
+}
+
+.bio p {
+    line-height: var(--line-height);
+    padding: 0.3rem 0;
+    margin: 0; /* Quitar el margen para mejor ajuste */
+}
+
+/* Mantener los estilos previos para el contenido general */
+body {
+    --primary-shadow: rgba(0, 255, 245, 0.2);
+    --bottom-margin: 1rem;
+    --line-height: 1.6;
+}
+/* Conocimientos Técnicos */
+.technical-skills {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Titulo  */
+.technical-skills h2 { 
+    font-size: 30px; /* Tamaño de letra  */
+    font-weight: 600; /* Grosor del titulo  */
+    color: var(--title-color);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.technical-skills h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 50px;
+    background: var(--title-color);
+}
+
+/* Habilidades Personales */
+.skills {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.skills h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--title-color);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.skills h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 50px;
+    background: var(--title-color);
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Cinco columnas */
+    gap: 16px; /* Espacio entre tarjetas */
+    margin-top: 2rem;
+    justify-items: center; /* Centra las tarjetas */
+}
+
+.service-card {
+    width: 100%; /* Asegura que las tarjetas llenen su celda */
+    max-width: 300px; /* Tamaño máximo para las tarjetas */
+    height: auto; /* Altura ajustada */
+    max-height: 950px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 2rem;
+    background-color: var(--card-bg); /* Fondo de tarjeta definido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 8px;
+    position: relative; /* Necesario para el efecto de pseudo-elemento */
+    overflow: hidden; /* Asegura que el pseudo-elemento no se desborde */
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 5s linear infinite;
+    z-index: 0; /* Pone el fondo rotatorio detrás del contenido de la tarjeta */
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: var(--card-bg); /* Fondo interno de la tarjeta */
+    border-radius: 8px;
+    z-index: 1; /* Asegura que el fondo esté detrás del contenido de la tarjeta */
+}
+
+.service-card:hover {
+    box-shadow: 0px 0px 35px rgba(35, 33, 121, 0.562); /* Aumenta la sombra al pasar el ratón */
+    transform: scale(1.05); /* Escala ligeramente la tarjeta */
+}
+
+.skill-icon {
+    width: 80px; /* Ajusta según el tamaño que necesites */
+    height: 80px;
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+    margin-bottom: 1rem; /* Añade espacio entre la imagen y el texto */
+    z-index: 2; /* Asegura que el icono esté por encima del fondo rotatorio */
+}
+.icon {
+    font-size: 2rem;
+    color: var(--title-color); /* Usar el color del título para los íconos */
+    margin-bottom: 1rem;
+}
+.skill-title {
+    font-size: 1.5rem; /* Tamaño del título de habilidad */
+    font-weight: bold; /* Negritas */
+    color: var(--title-color); /* Color del título */
+    z-index: 2; /* Asegura que el título esté por encima del fondo rotatorio */
+}
+
+.description-container {
+    flex-grow: 1; /* Hace que la descripción ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Alinea el texto verticalmente */
+    align-items: center; /* Alinea las descripciones al centro horizontalmente */
+    justify-content: flex-start; /* Alinea las descripciones al inicio verticalmente */
+    text-align: center;
+    z-index: 2; /* Asegura que el texto esté por encima del fondo rotatorio */
+}
+
+.description-container p {
+    color: #ddd; /* Color del texto */
+}
+
+.text-5xl.font-bold.self-end {
+    align-self: flex-end; /* Mantiene este elemento en la parte inferior */
+}
+
+
+
+/* Tarjeta Principal */
+.card {
+    width: 350px;
+    height: 400px;
+    background: #2c2c2c; /* Fondo oscuro de la tarjeta */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all .6s;
+    z-index: 1; /* Asegúrate de que la tarjeta esté por encima del fondo rotatorio */
+}
+
+/* Efecto rotatorio de fondo */
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 5s linear infinite;
+    z-index: 0; /* Asegúrate de que el fondo esté detrás del contenido de la tarjeta */
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fondo de la tarjeta interna */
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: #1a1a1a; /* Fondo oscuro de la tarjeta interna */
+    border-radius: 15px;
+    z-index: 1; /* Asegúrate de que el fondo esté detrás del contenido de la tarjeta */
+}
+
+/* Contenido de la tarjeta */
+.card2 {
+    position: relative;
+    z-index: 2; /* Asegúrate de que el contenido esté por encima de los pseudo-elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card2 img {
+    width: 90%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.card2 h3 {
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.card2 p {
+    font-size: 1rem;
+    text-align: center;
+    color: #ddd;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 35px rgba(35, 33, 121, 0.562);
+}
+
+.card2:hover {
+    transform: scale(0.98);
+}
+
+/* Proyectos */
+.projects {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 0; /* Aumenta el espacio vertical a 3rem */
+}
+
+.projects h2 {
+    font-size: 32px; /* Cambia el tamaño de fuente a 32px */
+    font-weight: 600;
+    color: var(--title-color);
+    position: relative;
+    padding-bottom: 1.5rem; /* Ajusta el espaciado debajo del título */
+}
+
+.projects h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Ajusta la posición vertical de la línea */
+    transform: translateX(-50%);
+    height: 3px; /* Cambia la altura de la línea decorativa */
+    width: 60px;
+    background: var(--title-color);
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem; /* Aumenta el espacio superior */
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Aumenta el padding interno */
+    border-radius: .5rem;
+    transition: transform .2s;
+}
+
+.project:hover {
+    transform: translateY(-30px); /* Cambia la distancia del efecto hover */
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        display: none;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+
+    #btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #inicio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .s-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+}
+/* Estilo para el botón de regresar al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+}
+
+.scroll-to-top i {
+    margin: 0;
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="animate-title">Portafolio Digital</h1>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#habilidades-personales">Habilidades Personales</a></li>
+                    <li><a href="#conocimientos-tecnicos">Conocimientos Técnicos</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                </ul>
+                <button id="btn" onclick="showList()"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="s-container">
+            <div class="content">
+                <h1 class="title">¡Hola!</h1>
+                <h1 class="highlighted">Mi nombre es <span class="highlight">Rubén Eduardo Sánchez López</span></h1>
+                <h2 class="subtitle">Soy estudiante de <span class="highlight">Ingeniería Petrolera</span></h2>
+                <p class="description">Soy un apasionado de la ingeniería, la tecnología y el diseño.</p>
+                <div class="buttons">
+                    <a href="#sobre-mi" class="btn saber-mas">
+                        <button>Saber Más</button>
+                    </a>
+    
+                </div>
+            </div>
+            <img src="Imagenes/pfp.jpg" alt="Foto de perfil" class="profile-pic">
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="hero sobre-mi">
+        <div class="hero-title">
+            <h1>Sobre mí</h1>
+        </div>
+        <div class="bio">
+            <p>Soy un estudiante de 21 años de edad, actualmente cursando la carrera de Ingeniería Petrolera en el Instituto Tecnológico Superior de Macuspana. Mi pasión por el diseño, la simulación y la tecnología en general ha guiado mi desarrollo académico y profesional. Me considero una persona adaptable y proactiva, con habilidades destacadas en el trabajo en equipo y la resolución de problemas. A lo largo de mi carrera universitaria, he adquirido competencias técnicas en software de diseño gráfico, herramientas de simulación, y habilidades en modelado y renderizado 3D. Además, poseo conocimientos sólidos en el uso de plataformas de productividad y en la reparación y mantenimiento de computadoras. Mi objetivo es continuar creciendo profesionalmente y contribuir con mis conocimientos y habilidades en proyectos desafiantes y significativos.</p>
+        </div>
+    </section>    
+
+    <section id="habilidades-personales" class="skills">
+        <h2>Habilidades Personales</h2>
+        <div class="skills-wrapper">
+            <div class="skill">
+                <i class="fas fa-sync-alt icon"></i>
+                <h3>Adaptación al Cambio</h3>
+                <p>Capacidad para ajustarse rápidamente a nuevas situaciones.</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-heart icon"></i>
+                <h3>Empatía</h3>
+                <p>Habilidad para entender y compartir los sentimientos de los demás.</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-users icon"></i>
+                <h3>Trabajo en Equipo</h3>
+                <p>Capacidad para colaborar efectivamente con otros para alcanzar objetivos comunes.</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-lightbulb icon"></i>
+                <h3>Proactividad</h3>
+                <p>Iniciativa para anticipar y resolver problemas antes de que ocurran.</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-tachometer-alt icon"></i>
+                <h3>Tolerancia a la Presión</h3>
+                <p>Capacidad para mantener la calma y efectividad bajo situaciones de estrés.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="conocimientos-tecnicos" class="technical-skills">
+        <h2>Conocimientos Técnicos</h2>
+        <div class="skills-wrapper">
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/autocad.svg" alt="AutoCAD" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    AutoCAD
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Conocimientos en el uso de AutoCAD para el diseño y creación de DTI's en 2D.
+                    </p>
+                </div>
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/cinema4d.svg" alt="Cinema 4D" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Cinema 4D
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Habilidad avanzada en Cinema 4D para modelar, animar y renderizar gráficos en 3D. Conocimientos en la creación de efectos visuales y animaciones para proyectos multimedia.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/pixlr.svg" alt="Pixlr" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Pixlr
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Competente en la edición de imágenes con Pixlr, ofreciendo ajustes y retoques rápidos y efectivos.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/microsoft365.svg" alt="Microsoft 365" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Microsoft 365
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Dominio de Microsoft 365, incluyendo la suite de aplicaciones como Word, Excel y PowerPoint, así como herramientas de colaboración como OneDrive y Teams. Experiencia en la creación de documentos, hojas de cálculo y presentaciones profesionales.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/filmora.svg" alt="Filmora" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Filmora
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Conocimientos en la edición de video con Filmora, con capacidad para cortar, fusionar y aplicar efectos a videos. Ideal para la creación de contenido multimedia atractivo y dinámico para diversos proyectos.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/vscode.svg" alt="Visual Studio Code" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Visual Studio Code
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Hábil en el uso de Visual Studio Code para el desarrollo de software y programación. Capaz de personalizar el entorno de desarrollo con extensiones para optimizar el flujo de trabajo.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/illustrator.svg" alt="Adobe Illustrator" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Adobe Illustrator
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Conocimientos en Adobe Illustrator para la creación de gráficos vectoriales y diseños visuales.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/qtdesigner.svg" alt="Qt Designer" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Qt Designer
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Habilidad en Qt Designer para diseñar interfaces gráficas de usuario (GUI) en aplicaciones de escritorio. Capaz de crear interfaces visualmente atractivas y funcionales que mejoran la experiencia del usuario.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/python.svg" alt="Python" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Python
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Habilidad en Python, utilizando este lenguaje para desarrollar softwares, analizar datos y desarrollar soluciones de automatización. Competente en la implementación de scripts y herramientas para resolver problemas.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>
+            <div class="service-card">
+                <img src="Imagenes/ICONOS/computer_repair.svg" alt="Reparación y Mantenimiento de Computadoras" class="skill-icon">
+                <p class="skill-title font-bold text-2xl group-hover:text-white text-black/80">
+                    Reparación y Mantenimiento de Computadoras
+                </p>
+                <div class="description-container">
+                    <p class="text-gray-400 text-sm">
+                        Experto en reparación y mantenimiento de computadoras, con habilidades en diagnóstico, solución de problemas de hardware y software, y optimización de sistemas. Capaz de ofrecer soporte técnico eficaz y asegurar el óptimo funcionamiento de equipos informáticos.
+                    </p>
+                </div>
+                <p class="text-5xl font-bold self-end">
+                    
+                </p>
+            </div>                       
+        </div>
+    </section>       
+    
+    <section id="proyectos" class="projects">
+        <h2>Proyectos</h2>
+        <div class="projects-wrapper">
+            <!-- Tarjeta 1 -->
+            <div class="project card">
+                <div class="card2">
+                    <img src="Imagenes/cinema4d.jpg" alt="Cinema 4D">
+                    <h3>Cinema 4D</h3>
+                    <p>Experiencia en modelado y renderizado de proyectos en 3D y 4D.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="project card">
+                <div class="card2">
+                    <img src="Imagenes/autocad.jpg" alt="AutoCAD">
+                    <h3>AutoCAD</h3>
+                    <p>Conocimientos básicos, con experiencia en el desarrollo de un Diagrama de Tuberías e Instrumentación (DTI).</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="project card">
+                <div class="card2">
+                    <img src="Imagenes/python.png" alt="Python">
+                    <h3>Desarrollo de un software académico</h3>
+                    <p>Desarrollo de un software utilizando el lenguaje de programación Python para la simulación y predicción del gradiente de presión en pozos verticales.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="project card">
+                <div class="card2">
+                    <img src="Imagenes/qtpyside6.png" alt="Qt PySide6">
+                    <h3>Qt PySide6</h3>
+                    <p>Habilidad para crear aplicaciones de software utilizando Python, con interfaces gráficas atractivas e intuitivas.</p>
+                </div>
+            </div>
+        </div>           
+    </section>
+    
+        <!-- Botón de Regresar al Inicio -->
+        <a href="#inicio" class="scroll-to-top" id="scrollToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    
+        <script>
+            // Obtener el botón
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+            // Mostrar el botón al hacer scroll hacia abajo y ocultarlo al hacer scroll hacia arriba
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) { // Mostrar el botón cuando se ha desplazado más de 300px
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+        
+            // Suavizar el desplazamiento al hacer clic en el botón
+            scrollToTopBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>        
+    </body>
+    </html>
